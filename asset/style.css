@@ -116,6 +116,9 @@ input[type='text']{
    
 }
 
+
+/* HEADER SECTION */
+
 nav {
     background-color: var(--bg-dark);
     display: flex;
@@ -407,6 +410,9 @@ nav {
 }
 
 
+
+/* DIV  CONTAINER */
+
 main{
    width: 100%;
    margin: 32px auto;
@@ -415,6 +421,9 @@ main{
 section{
     margin-bottom: 16px;
 }
+
+
+/* DISMISSABLE CONTAINER */
 
 .dismiss{
     border-radius: 8px;
@@ -485,6 +494,9 @@ section{
 padding: 6px;
 }
 
+
+/* PERSONALIZED SETUP GUIDE */
+
 .setup-sec{
     padding: 8px;
     background-color: var(--white);
@@ -553,6 +565,7 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
     border-radius: 5px;
     background: var(--grey-300);
+    transition: all ease 0.3s;
 }
   
   
@@ -566,7 +579,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .animate-wrap {
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 .personalized-guide {
@@ -575,6 +588,7 @@ progress[value]::-webkit-progress-value {
     padding: 8px;
     transition: all 0.1s;
  }
+ 
  .personalized-guide:hover{
     background: #F3F3F3;
  }
@@ -589,6 +603,7 @@ progress[value]::-webkit-progress-value {
     opacity: 0;
 
 }
+
 .guide-box-open {
     height: 350px;
     visibility: visible;
@@ -635,53 +650,45 @@ progress[value]::-webkit-progress-value {
 
 .input-check:checked ~ .check-icon-box{
     border: none;
-    animation: myCheckAnimation 0.75s forwards;
+    animation: animate-check 0.65s forwards;
 }
 
 .input-check:checked ~ .check-icon-box .checkmark path {
     fill: var(--white);
 }
 
-@keyframes myCheckAnimation {
+@keyframes animate-check {
     0% {
       background-color: #8a8a8a;
     }
   
     20% {
-      background-color: transparent;
-      border: 2px solid var(--states-pressed);
-      border-top: 2px solid var(--grey-300);
-      border-left: 2px solid var(--grey-300);
-      border-right: 2px solid var(--grey-300);
-      rotate: 0deg;
+        border: 1px solid var(--states-pressed);
+        border-top: 1px solid var(--grey-300);
+        border-left: 1px solid var(--grey-300);
+        border-right: 1px solid var(--grey-300);
+        rotate: 0deg;
+        background-color: transparent;
     }
   
     40% {
-      background-color: transparent;
-      border: 2px solid var(--states-pressed);
-      border-top: 2px solid var(--grey-300);
-      border-left: 2px solid var(--grey-300);
-      border-right: 2px solid var(--grey-300);
-      rotate: -180deg;
+        border: 3px solid var(--states-pressed);
+        border-top: 3px solid var(--grey-300);
+        border-left: 3px solid var(--grey-300);
+        border-right: 3px solid var(--grey-300);
+        rotate: -180deg;
+        background-color: transparent;
     }
-  
-    60% {
-      background-color: transparent;
-      border: 2px solid var(--states-pressed);
-      border-top: 2px solid var(--grey-300);
-      border-left: 2px solid var(--grey-300);
-      border-right: 2px solid var(--grey-300);
-      rotate: -360deg;
-    }
+
   
     80% {
-      background-color: var(--grey-100);
-      scale: 0.75;
+        scale: 1.2;
+        background-color: var(--grey-100);
     }
   
     100% {
-      background-color: var(--grey-300);
-      scale: 1;
+        scale: 1;
+        background-color: var(--grey-300);
     }
   }
 
