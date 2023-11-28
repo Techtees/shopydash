@@ -440,7 +440,7 @@ section{
 .plan{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 12px 8px 12px 16px;
 
 }
@@ -502,6 +502,14 @@ padding: 6px;
     background-color: var(--white);
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
     border-radius: 18px;;
+}
+@media screen and (max-width:700px) {
+    .setup-sec {
+        border-radius: 0px;
+    }
+}
+.setup-guide-control{
+    padding: 8px;
 }
 
 .setup-guide-info{
@@ -605,9 +613,10 @@ progress[value]::-webkit-progress-value {
 }
 
 .guide-box-open {
-    height: 350px;
+    height:370px;
     visibility: visible;
     opacity: 1;
+    padding-bottom: 20px;
 }
 
 .input-check {
@@ -710,7 +719,7 @@ progress[value]::-webkit-progress-value {
 .open-guide-content{
     visibility: visible;
     opacity: 1;
-    height: 105px;
+    height: 120px;
     transition: all ease 0.4s;
 }
 
@@ -719,7 +728,7 @@ progress[value]::-webkit-progress-value {
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding-left: 30px;
+padding-left: 26px;
 
 }
 
@@ -734,6 +743,7 @@ font-weight: 500;
 /* line-height: 140%; */
 padding-bottom: 16px;
 }
+
 .content-left a{
 color: var(--state-focused, #005BD3);
 font-family: Inter;
@@ -746,6 +756,8 @@ line-height: 140%;
 @media screen and (max-width: 700px) {
     .content-left p {
         width: fit-content;
+        padding-top: 10px;
+        font-size: 12px;
     }
     .personalized-guide-content-info img {
         display: none;
